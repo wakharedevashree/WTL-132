@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #b2fcd9 0%, #b0f5fe 50%, #95ccff 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #36454F;
+    
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #e8f4ff 0%, #ddf9fd 50%, #ffffff 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E8B57;
+}
+.logo span{
+    font-family: cursive;
+    font-size: 36px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #5A6D7D;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #FF7F50;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding-bottom: 280px;
+    box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #b2fcd9 0%, #b0f5fe 50%, #95ccff 100%);
+}
+
+.stats-container {
+    padding: 9px 60px;
+    border-radius: 12px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(100, 179, 149, 0.9);
+    width: 80%;
+    max-width: 700px;
+    border-top: 4px solid #FF7F50;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+
+
+form {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+input {
+    padding: 14px 20px;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    border-radius: 8px;
+    color: #36454F;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2E8B57;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+}
+
+input::placeholder {
+    color: #9e9e9e;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF7F50;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6b3a;
+    transform: scale(1.05);
+}
+
+
+.task_list {
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 0;
+    width: 80%;
+    max-width: 500px;
+}
+
+.task_list li {
+    background-color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #5A6D7D;
+    box-shadow: 0 2px 8px rgba(100, 179, 149, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid #2E8B57;
+}
+
+.task_list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 179, 149, 0.15);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: #ffffff;
+    text-align: center;
+    color: #5A6D7D;
+    font-weight: 500;
+    font-size: 14px;
+    border-top: 1px solid #e8f5e9;
+}
+
+
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+    color: #2E8B57;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.2);
+    color: #FF7F50;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+
+
+.task_list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.task-text {
+    flex-grow: 1;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #36454F;
+    word-break: break-word;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.button-group button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease;
+}
+
+.button-group button:hover {
+    transform: scale(1.2);
+}
