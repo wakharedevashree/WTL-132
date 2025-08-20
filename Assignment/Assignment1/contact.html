@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | PaithaniKalā</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .contact-section {
+      padding: 4rem 2rem;
+     /* background: linear-gradient(to bottom right, #d1ffff, #ffd7e4);*/
+     background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.1)),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2feWGfTvcgfky-fmQIKJEg3F1Dxqv3D8xrQ&s");
+    
+     margin: auto ;
+     
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    box-shadow: 0 0 30px gray;
+     
+    }
+
+    .contact-section h2 {
+      font-size: 3.5rem;
+      color:#ffffff;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-container {
+       
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      max-width: 700px;
+    
+      margin:auto;
+    }
+
+    .contact-form {
+    
+      background-color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #444;
+      text-align: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #009879;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      
+    }
+
+    .contact-form button:hover {
+      background-color: #00665c;
+      box-shadow: 0 4px 14px #00665c;
+    }
+
+   
+
+    @media (max-width: 768px) {
+      .contact-section h2 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+
+      <div class="contact-form">
+        <h3>Send us a message</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="text" placeholder="Subject" />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+     
+
+    </div>
+  </section>
+<footer>
+  <div class="footer-container">
+
+
+    <div class="footer-section about">
+      <h3>PaithaniKalā</h3>
+      <p>
+        A tribute to the elegance of Maharashtrian handloom art. We bring to you the legacy of Yeola's traditional sarees with modern grace.
+      </p>
+    </div>
+
+   
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="saree.html">Customize</a></li>
+        <li><a href="artisian.html">Artisans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-envelope"></i> support@paithanikala.in</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-map-marker-alt"></i> Yeola, Maharashtra, India</p>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <strong>PaithaniKalā</strong>. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

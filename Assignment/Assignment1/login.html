@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Sign Up | PaithaniKalā</title>
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="auth-box">
+
+      <h2 class="auth-heading">Welcome to <span>PaithaniKalā</span></h2>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchForm('login')">Login</button>
+        <button class="tab-btn" onclick="switchForm('signup')">Sign Up</button>
+      </div>
+
+      <form id="login-form" class="form-section active">
+        <input type="text" placeholder="Email " required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="auth-btn">Login</button>
+        <p class="switch-text">Don't have an account? <a href="#" onclick="switchForm('signup')">Sign Up</a></p>
+      </form>
+
+      <form id="signup-form" class="form-section">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Create Password" required />
+        
+        <button type="submit" class="auth-btn">Create Account</button>
+        <p class="switch-text">Already have an account? <a href="#" onclick="switchForm('login')">Login</a></p>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    function switchForm(formType) {
+      const loginForm = document.getElementById('login-form');
+      const signupForm = document.getElementById('signup-form');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      if (formType === 'login') {
+        loginForm.classList.add('active');
+        signupForm.classList.remove('active');
+        buttons[0].classList.add('active');
+        buttons[1].classList.remove('active');
+      } else {
+        loginForm.classList.remove('active');
+        signupForm.classList.add('active');
+        buttons[0].classList.remove('active');
+        buttons[1].classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>

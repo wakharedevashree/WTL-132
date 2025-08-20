@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Artisans | PaithaniKalā</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  <style>
+    .artisan-section {
+      padding: 4rem 2rem;
+     
+      text-align: center;
+       background: linear-gradient(to right, #e1ffff, #fef0ff);
+    }
+
+    .artisan-section h2 {
+      font-size: 3.5rem;
+      color: rgb(0, 99, 102);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      margin-bottom: 2rem;
+      padding: 1rem 3rem;
+      background-color: #dad8d8;
+     
+    }
+
+    .artisan-section p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+      
+      margin-bottom: 3rem;
+    }
+
+    .artisan-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .artisan-card {
+      background: linear-gradient(to bottom right, #f0fff5, #ffeef5);
+      border-radius: 20px;
+      width: 280px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .artisan-card:hover {
+      transform: scale(1.05);
+    }
+
+    .artisan-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .artisan-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .artisan-info h3 {
+      font-size: 1.5rem;
+      color: #00665c;
+      margin-bottom: 0.5rem;
+    }
+
+    .artisan-info p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .artisan-section h2 {
+        font-size: 2.5rem;
+      }
+
+      .artisan-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="navbar">
+      <div class="logo">PaithaniKalā</div>
+      <div class="search-bar">
+        <i class="fa-brands fa-searchengin"></i> <input type="text" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="saree.html">Customize</a>
+        <a href="artisian.html">Artisans</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="icons">
+        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div>
+  <section class="artisan-section">
+    <h2>Meet Our Artisans</h2>
+    <p>We proudly present the skilled hands behind every Paithani masterpiece. These artisans from Yeola carry forward the legacy of weaving tradition, one saree at a time.</p>
+
+    <div class="artisan-card-container">
+
+      <div class="artisan-card">
+        <img src="p1.jpeg" alt="">
+        <div class="artisan-info">
+          <h3>Arun Tak</h3>
+          <p>25+ years of weaving experience. Specializes in intricate peacock and lotus motifs using pure zari threads.</p>
+        </div>
+      </div>
+
+      <div class="artisan-card">
+        <img src="p2.jpeg" alt="">
+        <div class="artisan-info">
+          <h3>Vaishanvi Pawar</h3>
+          <p>Master weaver from Yeola. Known for vibrant color combinations and double pallu designs.</p>
+        </div>
+      </div>
+
+      <div class="artisan-card">
+        <img src="p3.jpeg" alt="">
+        <div class="artisan-info">
+          <h3>Nihar Deshmukh</h3>
+          <p>Younger generation artisan preserving the family craft. Expert in weaving customized orders with modern patterns.</p>
+        </div>
+      </div>
+
+       <div class="artisan-card">
+        <img src="p4.jpeg" alt="">
+        <div class="artisan-info">
+          <h3>Neha Deshmukh</h3>
+          <p>Younger generation artisan preserving the family craft. Expert in weaving customized orders with modern patterns.</p>
+        </div>
+      </div>
+
+       <div class="artisan-card">
+        <img src="p5.jpeg" alt="">
+        <div class="artisan-info">
+          <h3>Vijay Deshmukh</h3>
+          <p>Younger generation artisan preserving the family craft. Expert in weaving customized orders with modern patterns.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
