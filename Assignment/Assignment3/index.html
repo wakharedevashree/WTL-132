@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food recipies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      .input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.251);
+      }
+      input {
+        width: 50%;
+        height: 2.2rem;
+        background-color: rgba(0, 0, 0, 0.251);
+        color: white;
+        border: 1px solid;
+        border-radius: 10px;
+      }
+      button {
+        font-weight: bold !important;
+      }
+      img {
+        width: 220px;
+        border-radius: 10px;
+        border: 2px solid yellow;
+      }
+      .food {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        padding: 0 3rem;
+      }
+      p {
+        text-align: center;
+        font-size: 1.3rem;
+        padding-top: 1rem;
+        width:200px;
+      }
+      img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      img:hover {
+        transform: translatey(-10px) scale(1.05);
+        box-shadow: 0 5px 10px rgba(230, 243, 56, 0.972);
+      }
+    </style>
+  </head>
+  <body class="bg-black text-light">
+    <div class="container my-3 text-center btn">
+      <button id="indian" type="button" class="btn btn-outline-primary">
+        Indian
+      </button>
+      <button id="canadian" type="button" class="btn btn-outline-secondary">
+        Canadian
+      </button>
+      <button id="american" type="button" class="btn btn-outline-success">
+        American
+      </button>
+      <button id="thai" type="button" class="btn btn-outline-danger">
+        Thai
+      </button>
+      <button id="british" type="button" class="btn btn-outline-warning">
+        British
+      </button>
+      <button id="russian" type="button" class="btn btn-outline-info">
+        Russian
+      </button>
+    </div>
+
+    <div class="input">
+      <input id="input" type="text" placeholder="Enter your Menu" />
+    </div>
+
+    <div class="food"></div>
+    <script>
+      let food = document.querySelector(".food");
+
+      let indian = document.querySelector("#indian");
+      let canadian = document.querySelector("#canadian");
+      let american = document.querySelector("#american");
+      let thai = document.querySelector("#thai");
+      let british = document.querySelector("#british");
+      let russian = document.querySelector("#russian");
+
+      let recipe;
+      const FetchData = async (area) => {
+        const api = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
+        );
+        const data = await api.json();
+        recipe = data.meals;
+        ShowData(recipe);
+        console.log(data);
+      };
+      FetchData("indian");
+
+      const search = () => {
+  let input = document.querySelector("#input");
+
+  input.addEventListener("keydown", async (e) => {
+    if (e.key === "Enter") {
+      let inputVal = input.value.trim();
+      if (!inputVal) {
+        food.innerHTML = "<p>Please enter a dish name</p>";
+        return;
+      }
+
+      const api = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputVal}`
+      );
+      const data = await api.json();
+
+      if (!data.meals) {
+        food.innerHTML = `<p>No results found for "${inputVal}"</p>`;
+        return;
+      }
+
+      recipe = data.meals;
+      ShowData(recipe);
+    }
+  });
+};
+search();
+
+
+      let ShowData = (items) => {
+        food.innerHTML = items
+          .map(
+            (meal) => `
+        <div >
+               <div>
+                <img src=${meal.strMealThumb}  />
+                <p>${meal.strMeal}</p>
+               </div>
+        </div>
+        `
+          )
+          .join(" ");
+      };
+
+      indian.addEventListener("click", () => {
+        FetchData("indian");
+      });
+      canadian.addEventListener("click", () => {
+        FetchData("canadian");
+      });
+      american.addEventListener("click", () => {
+        FetchData("american");
+      });
+      thai.addEventListener("click", () => {
+        FetchData("thai");
+      });
+      british.addEventListener("click", () => {
+        FetchData("british");
+      });
+      russian.addEventListener("click", () => {
+        FetchData("russian");
+      });
+    </script>
+  </body>
+</html>
